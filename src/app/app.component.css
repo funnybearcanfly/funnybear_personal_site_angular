@@ -68,6 +68,11 @@ h3 {
     text-decoration: none;
 }
 
+.selected {
+  background-color: darkslategrey !important;
+  color: white;
+}
+
 .content{
     padding-left: 3em;
     padding-right: 3em

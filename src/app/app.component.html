@@ -7,10 +7,10 @@
       <nav class="nav">
         <ul class="nav-list">
           <li class="nav-item">
-            <a class="pure-button" href="http://purecss.io">Posts</a>
+            <a class="pure-button" [class.selected]="selectedLink === '/posts'" routerLink="/posts" routerLinkActive="active">Posts</a>
           </li>
           <li class="nav-item">
-            <a class="pure-button" href="http://yuilibrary.com">About</a>
+            <a class="pure-button" routerLink="/about" routerLinkActive="active">About</a>
           </li>
         </ul>
       </nav>

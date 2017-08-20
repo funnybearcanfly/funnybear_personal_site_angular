@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PostsComponent } from './posts.component';
 
 const routes: Routes = [
-    { path: '', redirectTo: '/posts', pathMatch: 'full' },
+    //{ path: '', redirectTo: '/posts', pathMatch: 'full' },
     { path: 'posts', component: PostsComponent }
 ];
 
