@@ -1,7 +1,10 @@
 export class Post{
     id: number;
-	authurId: number;
+	authurName: String;
 	lastModifiedTime: Date;
 	title: String;
+	tag: String;
+	category: String;
+	description: String;
 	content: String;
 }
