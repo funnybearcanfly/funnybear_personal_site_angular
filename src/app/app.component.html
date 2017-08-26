@@ -1,22 +1,46 @@
-<div id="layout" class="pure-g">
-  <div class="sidebar pure-u-1 pure-u-md-1-4">
-    <div class="header">
-      <img width="64" height="64" src="assets/img/bearAvatar.png">
-      <h1 class="brand-title">FunnyBear's Blog</h1>
-      <h2 class="brand-tagline">Study and Grow</h2>
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="pure-button" [class.selected]="selectedLink === '/posts'" routerLink="/posts" routerLinkActive="active">Posts</a>
-          </li>
-          <li class="nav-item">
-            <a class="pure-button" routerLink="/about" routerLinkActive="active">About</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <div class="content pure-u-1 pure-u-md-3-4">
-    <router-outlet></router-outlet>
+<div class="blog-masthead">
+  <div class="container">
+    <nav class="nav">
+      <a class="nav-link active" routerLink="/posts" routerLinkActive="active">Home</a>
+      <a class="nav-link" href="#">New features</a>
+      <a class="nav-link" href="#">Press</a>
+      <a class="nav-link" href="#">New hires</a>
+      <a class="nav-link" href="#">About</a>
+    </nav>
   </div>
 </div>
+
+<div class="blog-header">
+  <div class="container">
+    <h1 class="blog-title">The Bootstrap Blog</h1>
+    <p class="lead blog-description">An example blog template built with Bootstrap.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 blog-main">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-sm-3 offset-sm-1 blog-sidebar">
+      <div class="sidebar-module sidebar-module-inset">
+        <h4>About</h4>
+        <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean
+          lacinia bibendum nulla sed consectetur.</p>
+      </div>
+      <div class="sidebar-module">
+        <archives></archives>
+      </div>
+      <div class="sidebar-module">
+        <elsewhere></elsewhere>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="blog-footer">
+  <p>Blog template built for <a href="https://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+  <p>
+    <a href="#">Back to top</a>
+  </p>
+</footer>

@@ -6,6 +6,8 @@ import { PaginationDirective } from 'angular2-bootstrap-pagination/directives/pa
 
 import { AppComponent } from './app.component';
 import { PostsComponent } from './posts.component';
+import { ArchivesComponent } from './archives.component';
+import { ElseWhereComponent } from './elsewhere.component';
 
 import { AppRoutingModule } from './app-routing.module'
 
@@ -15,7 +17,9 @@ import { PostService } from './post.service';
   declarations: [
     PaginationDirective,
     AppComponent,
-    PostsComponent
+    PostsComponent,
+    ArchivesComponent,
+    ElseWhereComponent
   ],
   imports: [
     AppRoutingModule,
