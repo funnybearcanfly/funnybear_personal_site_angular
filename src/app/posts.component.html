@@ -3,11 +3,8 @@
     <div class="blog-post">
       <h2 class="blog-post-title">{{post.title}}</h2>
       <p class="blog-post-meta">{{post.lastModifiedTime}} by <a href="#">{{post.authurName}}</a></p>
-
       <p>{{post.description}}</p>
       <hr>
     </div>
   </div>
-  <ng-pagination [totalItems]="totalItems" [(ngModel)]="currentPage" [maxSize]="maxSize" [boundaryLinks]="true" (pageChanged)="pageChanged($event)"
-    previous-text="&lsaquo;" next-text="&rsaquo;" first-text="First" last-text="Last"></ng-pagination>
 </div>

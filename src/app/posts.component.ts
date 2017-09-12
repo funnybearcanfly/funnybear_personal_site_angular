@@ -10,10 +10,6 @@ import { PostService } from './post.service';
 export class PostsComponent implements OnInit {
     posts: Post[];
 
-    public currentPage: number = 1;
-    public totalItems: number = 200; // total numbar of page not items 
-    public maxSize: number = 10; // max page size 
-
     constructor(
         private postService: PostService) { }
 
