@@ -1,45 +1,32 @@
-<div class="blog-masthead">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-link active" routerLink="/posts" routerLinkActive="active">Home</a>
-      <a class="nav-link" href="#">New features</a>
-      <a class="nav-link" href="#">Press</a>
-      <a class="nav-link" href="#">New hires</a>
-      <a class="nav-link" href="#">About</a>
-    </nav>
+<div id="layout" class="pure-g">
+  <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+      <h1 class="brand-title">谭一雄的博客</h1>
+      <h2 class="brand-tagline">FunnyBear's Blog</h2>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="pure-button" href="">文章 Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="pure-button" href="">关于 About</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
-</div>
-
-<div class="blog-header">
-  <div class="container">
-    <h1 class="blog-title">谭一雄的博客</h1>
-    <p class="lead blog-description">Funny Bear Blog</p>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-8 blog-main">
+  <div class="content pure-u-1 pure-u-md-3-4">
+    <div>
       <router-outlet></router-outlet>
-    </div>
-    <div class="col-sm-3 offset-sm-1 blog-sidebar">
-      <div class="sidebar-module sidebar-module-inset">
-        <h4>About</h4>
-        <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean
-          lacinia bibendum nulla sed consectetur.</p>
-      </div>
-      <div class="sidebar-module">
-        <archives></archives>
-      </div>
-      <div class="sidebar-module">
-        <elsewhere></elsewhere>
+      <div class="footer">
+        <div class="pure-menu pure-menu-horizontal">
+          <ul>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">LinkedIn</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">GitHub</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-<footer class="blog-footer">
-  <p>
-    <a href="#">Back to top</a>
-  </p>
-</footer>

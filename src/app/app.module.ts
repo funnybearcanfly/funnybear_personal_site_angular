@@ -5,8 +5,6 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { PostsComponent } from './posts.component';
-import { ArchivesComponent } from './archives.component';
-import { ElseWhereComponent } from './elsewhere.component';
 
 import { AppRoutingModule } from './app-routing.module'
 
@@ -15,9 +13,7 @@ import { PostService } from './post.service';
 @NgModule({
   declarations: [
     AppComponent,
-    PostsComponent,
-    ArchivesComponent,
-    ElseWhereComponent
+    PostsComponent
   ],
   imports: [
     AppRoutingModule,
