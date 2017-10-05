@@ -8,7 +8,7 @@ import { Post } from './post';
 @Injectable()
 export class PostService {
     private headers = new Headers({ 'Content-Type': 'application/json' });
-    private serviceUrl = 'https://www.funnybear.top:8443/siteService/api/';
+    private serviceUrl = 'https://www.tanyixiong.com:8443/siteService/api/';
 
     constructor(private http: Http) { }
 
