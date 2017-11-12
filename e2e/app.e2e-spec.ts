@@ -1,10 +1,10 @@
-import { FunnybearPersonalSiteAngularPage } from './app.po';
+import { AppPage } from './app.po';
 
-describe('funnybear-personal-site-angular App', () => {
-  let page: FunnybearPersonalSiteAngularPage;
+describe('universal-demo-v5 App', () => {
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new FunnybearPersonalSiteAngularPage();
+    page = new AppPage();
   });
 
   it('should display welcome message', () => {

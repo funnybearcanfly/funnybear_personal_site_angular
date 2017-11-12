@@ -19,7 +19,7 @@ import { PostService } from './post.service';
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'funnybear-personal-site-angular' }),
     FormsModule,
     HttpModule
   ],
