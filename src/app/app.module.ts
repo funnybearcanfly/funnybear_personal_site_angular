@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about.component';
 import { PostsComponent } from './posts.component';
+import { PostDetailComponent } from './postDetail.component';
 
 import { AppRoutingModule } from './app-routing.module'
 
@@ -15,7 +16,8 @@ import { PostService } from './post.service';
   declarations: [
     AppComponent,
     AboutComponent,
-    PostsComponent
+    PostsComponent,
+    PostDetailComponent
   ],
   imports: [
     AppRoutingModule,

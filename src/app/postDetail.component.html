@@ -1,0 +1,10 @@
+<div *ngIf="post">
+    <header class="post-header">
+        <h2 class="post-title">{{post.title}}</h2>
+        <p class="post-meta">
+            {{post.lastModifiedTime | date:'MM/dd/yyyy, hh:mm a'}} By <a class="post-author" href="#">{{post.authurName}}</a>            under <a class="post-category">{{post.tag}}</a>
+        </p>
+    </header>
+    <div innerHTML="{{post.content}}">
+    </div>
+</div>

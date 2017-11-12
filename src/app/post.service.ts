@@ -19,6 +19,13 @@ export class PostService {
             .catch(this.handleError);
     }
 
+    public getPostDetail(id: number): Promise<Post> {
+        return this.http.get(this.serviceUrl + "getPostDetail/" + id)
+            .toPromise()
+            .then(response => response.json() as Post)
+            .catch(this.handleError);
+    }
+
     private handleError(error: any): Promise<any> {
         console.error('An error occurred', error);
         return Promise.reject(error.message || error);
