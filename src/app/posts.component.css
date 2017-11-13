@@ -1,0 +1,27 @@
+.posts-content {
+    margin-left: 20%;
+    margin-right: 20%
+}
+
+h4 {
+    color: #A3B5BF
+}
+
+.post-title {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 150%;
+    text-decoration: none
+}
+
+.post-title:hover {
+    text-decoration: underline
+}
+
+.post-meta {
+    font-style: italic;
+    font-size: 80%
+}
+
+.post-description p {
+    color: rgba(0, 0, 0, 0.7)
+}

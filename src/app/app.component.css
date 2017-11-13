@@ -1,0 +1,36 @@
+.header {
+    background-color: #406474
+}
+
+h1 {
+    color: #F2F2F5
+}
+
+.brand-title {
+    text-align: center
+}
+
+.brand-tagline {
+    text-align: center
+}
+
+.header a:hover {
+    background-color: transparent
+}
+
+.header .pure-menu-item:hover {
+    text-decoration: underline;
+}
+
+.header .pure-menu-link {
+    color: #A3B5Bf
+}
+
+.pure-menu {
+    margin-bottom: 0.5em
+}
+
+.footer {
+    margin-right: 2em
+}
+

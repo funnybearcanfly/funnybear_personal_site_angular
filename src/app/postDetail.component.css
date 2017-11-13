@@ -1,0 +1,14 @@
+.post-content {
+    margin-left: 20%;
+    margin-right: 20%
+}
+
+.post-title {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 150%;
+}
+
+.post-meta {
+    font-style: italic;
+    font-size: 80%
+}
