@@ -9,10 +9,10 @@
         <a class="post-category">{{post.tag}}</a>
       </p>
     </header>
-    <div class="post-description">
-      <p>
+    <div>
+      <p class="post-description">
         {{post.description}}
-      </p>
+      </p> <a class="read-more" routerLink="/post/{{post.id}}">查看详情</a>
     </div>
   </section>
 </div>

@@ -30,8 +30,13 @@ h4 {
     font-size: 80%
 }
 
-.post-description p {
-    color: rgba(0, 0, 0, 0.7)
+.post-description {
+    color: rgba(0, 0, 0, 0.7);
+    text-indent: 33px;
+}
+
+.read-more {
+    font-size: 80%;
 }
 
 @media screen and (max-width: 768px) {
