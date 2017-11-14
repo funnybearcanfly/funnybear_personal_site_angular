@@ -14,7 +14,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .posts-content {
+    .post-content {
         margin-left: 10%;
         margin-right: 10%
     }
