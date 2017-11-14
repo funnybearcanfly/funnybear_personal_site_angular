@@ -1,5 +1,6 @@
 <div class="posts-content">
   <h4 class="content-subhead">文章列表 Posts</h4>
+  <hr class="subhead-bottom-router"/>
   <section class="post" *ngFor="let post of posts">
     <header class="post-header">
       <a class="post-title" routerLink="/post/{{post.id}}">{{post.title}}</a>
