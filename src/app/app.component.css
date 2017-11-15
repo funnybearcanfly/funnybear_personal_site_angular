@@ -1,7 +1,7 @@
 .header {
     background-color: #363442;
     box-shadow: 0px 2px 6px #888888;
-    background-image: url("http://www.tanyixiong.com//assets//spaceplane.jpg");
+    background-image: url("https://www.tanyixiong.com//assets//spaceplane.jpg");
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
@@ -49,3 +49,8 @@ h1 {
     margin-bottom: 0.5em
 }
 
+@media screen and (max-width: 330px) {
+    .header {
+        background-image: unset;
+    }
+}
