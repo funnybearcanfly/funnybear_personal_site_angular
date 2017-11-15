@@ -1,16 +1,21 @@
-.post-content {
+.post-detail {
     margin-left: 20%;
     margin-right: 20%
 }
 
 .post-title {
-    color: rgba(0, 0, 0, 0.7);
-    font-size: 150%;
+    color: #18374E;
+    font-size: 130%;
 }
 
 .post-meta {
+    color: gray;
     font-style: italic;
-    font-size: 80%
+    font-size: 65%
+}
+
+.post-content {
+    font-size: 80%;
 }
 
 @media screen and (max-width: 768px) {

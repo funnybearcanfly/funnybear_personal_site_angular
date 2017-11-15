@@ -1,8 +1,9 @@
 .container {
-  max-width: 1024px;
-  width: 90%;
-  margin: 0 auto;
-  padding-top: 1em
+  width: 80%;
+  padding-top: 1em;
+  font-size: 80%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .timeline-item {
@@ -41,4 +42,11 @@
   -o-border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
      border-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
      border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%
+    }
 }

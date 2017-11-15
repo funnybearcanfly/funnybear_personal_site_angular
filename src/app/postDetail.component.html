@@ -1,4 +1,4 @@
-<div class="post-content" *ngIf="post">
+<div class="post-detail" *ngIf="post">
     <header class="post-header" align=center>
         <p class="post-title">{{post.title}}</p>
         <p class="post-meta">
@@ -6,5 +6,5 @@
         </p>
     </header>
     <hr class="post-header-router"/>
-    <div innerHTML="{{post.content}}"></div>
+    <div class="post-content" innerHTML="{{post.content}}"></div>
 </div>
