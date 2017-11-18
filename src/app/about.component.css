@@ -1,9 +1,7 @@
 .container {
-  width: 80%;
+  max-width: 728px;
   padding-top: 1em;
-  font-size: 80%;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin: 0 auto;
 }
 
 .timeline-item {
@@ -49,4 +47,4 @@
         margin-left: 10%;
         margin-right: 10%
     }
-}
+ }

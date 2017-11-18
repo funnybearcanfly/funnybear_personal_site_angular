@@ -1,6 +1,11 @@
 .post-detail {
-    margin-left: 20%;
-    margin-right: 20%
+    max-width: 768px;
+    margin:0 auto;
+}
+
+.post-header {
+    text-align: center;
+    margin-top: 2em;
 }
 
 .post-title {
@@ -11,11 +16,7 @@
 .post-meta {
     color: gray;
     font-style: italic;
-    font-size: 65%
-}
-
-.post-content {
-    font-size: 85%;
+    font-size: 80%
 }
 
 @media screen and (max-width: 768px) {
@@ -23,4 +24,4 @@
         margin-left: 10%;
         margin-right: 10%
     }
-}
+ }

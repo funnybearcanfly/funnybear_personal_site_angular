@@ -7,8 +7,8 @@
 }
 
 .posts-content {
-    margin-left: 20%;
-    margin-right: 20%;
+    max-width: 768px;
+    margin:0 auto
 }
 
 h4 {
@@ -28,13 +28,12 @@ h4 {
 .post-meta {
     color: gray;
     font-style: italic;
-    font-size: 65%;
+    font-size: 80%;
 }
 
 .post-description {
     color: rgba(0, 0, 0, 0.7);
     text-indent: 33px;
-    font-size: 85%;
 }
 
 .read-more {
@@ -46,4 +45,4 @@ h4 {
         margin-left: 10%;
         margin-right: 10%
     }
-}
+ }
