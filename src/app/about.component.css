@@ -4,6 +4,29 @@
   margin: 0 auto;
 }
 
+h4 {
+    color: #726F82
+}
+
+.about-subhead {
+  margin-bottom: 0.5em;
+}
+
+.certificates-bottom-router {
+    margin-bottom: 0px;
+}
+
+.course-title {
+  font-family: Arial;
+  margin-top: 0.5em; 
+  margin-bottom: 3px;
+  font-style: italic;
+}
+
+.experince-bottom-router {
+  margin-bottom: 1em;
+}
+
 .timeline-item {
   padding: 3em 2em 2em;
   position: relative;
