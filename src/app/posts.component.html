@@ -1,6 +1,11 @@
 <div class="posts-content">
+  <p style="text-align:center;">
+    <a href="https://tanyixiong.com/assets/tanyixiong.jpg">
+            <img class="img-circle" src="https://tanyixiong.com/assets/tanyixiong.jpg">
+        </a>
+  </p>
   <h4 class="content-subhead">文章列表 Posts</h4>
-  <hr class="subhead-bottom-router"/>
+  <hr class="subhead-bottom-router" />
   <section class="post" *ngFor="let post of posts">
     <header class="post-header">
       <a class="post-title" routerLink="/post/{{post.id}}">{{post.title}}</a>
