@@ -15,13 +15,14 @@ const POSTDETAIL_KEY = makeStateKey('postDetail');
 })
 export class PostDetailComponent implements OnInit {
     post: Post;
+    id: number;
 
     constructor(
         private route: ActivatedRoute,
         private postService: PostService,
         private state: TransferState) { }
 
-    getPostDetail(id : number): void {
+    getPostDetail(id: number): void {
         this.postService
             .getPostDetail(id)
             .then(post => {
@@ -30,12 +31,15 @@ export class PostDetailComponent implements OnInit {
             });
     }
 
-    ngOnInit(): void {
-        var id = Number.parseInt(this.route.snapshot.paramMap.get('id'));
-        console.log(id);
-        this.post = this.state.get(POSTDETAIL_KEY, null as any);
-        if (!this.post) {
-            this.getPostDetail(id);
+    ngOnInit(): void { }
+
+    ngDoCheck(): void {
+        var id_para = Number.parseInt(this.route.snapshot.paramMap.get('id'));
+        if (this.id !== id_para) {
+            this.id = id_para;
+            console.log(this.id);
+            this.post = this.state.get(POSTDETAIL_KEY, null as any);
+            this.getPostDetail(this.id);
         }
     }
 }
