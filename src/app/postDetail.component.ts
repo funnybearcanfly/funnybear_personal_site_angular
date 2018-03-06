@@ -15,6 +15,7 @@ const POSTDETAIL_KEY = makeStateKey('postDetail');
 })
 export class PostDetailComponent implements OnInit {
     post: Post;
+    loading = false;
     id: number;
 
     constructor(
@@ -27,8 +28,15 @@ export class PostDetailComponent implements OnInit {
             .getPostDetail(id)
             .then(post => {
                 this.post = post;
+                this.loading = false;
                 this.state.set(POSTDETAIL_KEY, post as any);
             });
+
+        setTimeout(() => {
+            if (this.post === null) {
+                this.loading = true;
+            }
+        }, 500);
     }
 
     ngOnInit(): void { }
@@ -36,6 +44,7 @@ export class PostDetailComponent implements OnInit {
     ngDoCheck(): void {
         var id_para = Number.parseInt(this.route.snapshot.paramMap.get('id'));
         if (this.id !== id_para) {
+            this.post = null;
             this.id = id_para;
             console.log(this.id);
             this.post = this.state.get(POSTDETAIL_KEY, null as any);

@@ -2,6 +2,7 @@ import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-bro
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { LoadingModule } from 'ngx-loading';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about.component';
@@ -24,7 +25,8 @@ import { PostService } from './post.service';
     BrowserModule.withServerTransition({ appId: 'funnybear-personal-site-angular' }),
     FormsModule,
     HttpModule,
-    BrowserTransferStateModule
+    BrowserTransferStateModule,
+    LoadingModule
   ],
   providers: [PostService],
   bootstrap: [AppComponent]

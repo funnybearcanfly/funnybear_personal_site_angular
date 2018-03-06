@@ -14,6 +14,7 @@ const POSTS_KEY = makeStateKey('posts');
 })
 export class PostsComponent implements OnInit {
     posts: Post[];
+    loading = false;
 
     constructor(
         private postService: PostService,
@@ -24,13 +25,21 @@ export class PostsComponent implements OnInit {
             .getPosts()
             .then(posts => {
                 this.posts = posts;
+                this.loading = false;
                 this.state.set(POSTS_KEY, posts as any);
             });
+
+        setTimeout(() => {
+            if (this.posts === null) {
+                this.loading = true;
+             }
+        }, 500);
     }
 
     ngOnInit(): void {
         this.posts = this.state.get(POSTS_KEY, null as any);
         if (!this.posts) {
+            this.posts = null;
             this.getPosts();
         }
     }
