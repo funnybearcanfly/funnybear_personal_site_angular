@@ -9,7 +9,7 @@
   <hr class="subhead-bottom-router" />
   <section class="post" *ngFor="let post of posts">
     <header class="post-header">
-      <a class="post-title" routerLink="/post/{{post.id}}">{{post.title}}</a>
+      <a class="post-title" routerLink="/post/{{post.key}}">{{post.title}}</a>
       <p class="post-meta">
         {{post.lastModifiedTime | date:'MM/dd/yyyy, hh:mm a'}} By <a class="post-author" href="#">{{post.authurName}}</a>        under
         <a class="post-category">{{post.tag}}</a>
@@ -18,7 +18,7 @@
     <div>
       <p class="post-description">
         {{post.description}}
-      </p> <a class="read-more" routerLink="/post/{{post.id}}">查看详情</a>
+      </p> <a class="read-more" routerLink="/post/{{post.key}}">查看详情</a>
     </div>
   </section>
 </div>

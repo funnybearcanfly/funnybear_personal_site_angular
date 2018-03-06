@@ -19,8 +19,8 @@ export class PostService {
             .catch(this.handleError);
     }
 
-    public getPostDetail(id: number): Promise<Post> {
-        return this.http.get(this.serviceUrl + "getPostDetail/" + id)
+    public getPostDetail(key: String): Promise<Post> {
+        return this.http.get(this.serviceUrl + "getPostDetail/" + key)
             .toPromise()
             .then(response => response.json() as Post)
             .catch(this.handleError);

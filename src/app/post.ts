@@ -1,5 +1,6 @@
 export class Post{
-    id: number;
+	id: number;
+	key: String;
 	authurName: String;
 	lastModifiedTime: Date;
 	title: String;
