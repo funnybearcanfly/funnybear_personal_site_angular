@@ -3,18 +3,12 @@
     height: 10em;
     width: 10em;
 }
-
-.course-title {
-  font-family: Arial;
-  margin-top: 0.5em; 
-  margin-bottom: 3px;
-  font-style: italic;
+.certificateGallery {
+  text-align: center
 }
-
-.experince-bottom-router {
-  margin-bottom: 1em;
+ngx-gallery /deep/ .ngx-gallery-arrow {
+    color: #726F82;
 }
-
 .timeline-item {
   padding: 3em 2em 2em;
   position: relative;
@@ -52,10 +46,3 @@
      border-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
      border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
 }
-
-@media screen and (max-width: 768px) {
-    .container {
-        margin-left: 10%;
-        margin-right: 10%
-    }
- }
