@@ -1,12 +1,12 @@
 <ngx-loading [show]="loading"></ngx-loading>
-<div class="posts-content">
+<div class="container">
   <p style="text-align:center;">
     <a href="https://tanyixiong.com/assets/tanyixiong.jpg">
             <img class="img-circle" src="https://tanyixiong.com/assets/tanyixiong-small.jpg">
         </a>
   </p>
-  <h4 class="content-subhead">文章列表 Posts</h4>
-  <hr class="subhead-bottom-router" />
+  <h4>文章列表 Posts</h4>
+  <hr/>
   <section class="post" *ngFor="let post of posts">
     <header class="post-header">
       <a class="post-title" routerLink="/post/{{post.key}}">{{post.title}}</a>

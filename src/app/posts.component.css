@@ -1,24 +1,11 @@
-.content-subhead {
-    margin-bottom: 0.5em;
-}
-
 .post {
     margin-top: 2em;
-}
-
-.posts-content {
-    max-width: 768px;
-    margin:0 auto
 }
 
 .img-circle {
     border-radius: 50%;
     height: 10em;
     width: 10em;
-}
-
-h4 {
-    color: #726F82
 }
 
 .post-title {
@@ -45,10 +32,3 @@ h4 {
 .read-more {
     font-size: 80%;
 }
-
-@media screen and (max-width: 768px) {
-    .posts-content {
-        margin-left: 10%;
-        margin-right: 10%
-    }
- }

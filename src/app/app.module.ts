@@ -3,9 +3,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { LoadingModule } from 'ngx-loading';
+import { NgxGalleryModule } from 'ngx-gallery';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about.component';
+import { GalleryComponent } from './gallery.component';
 import { PostsComponent } from './posts.component';
 import { PostDetailComponent } from './postDetail.component';
 
@@ -17,6 +19,7 @@ import { PostService } from './post.service';
   declarations: [
     AppComponent,
     AboutComponent,
+    GalleryComponent,
     PostsComponent,
     PostDetailComponent
   ],
@@ -26,7 +29,8 @@ import { PostService } from './post.service';
     FormsModule,
     HttpModule,
     BrowserTransferStateModule,
-    LoadingModule
+    LoadingModule,
+    NgxGalleryModule
   ],
   providers: [PostService],
   bootstrap: [AppComponent]
