@@ -14,8 +14,8 @@ export class GalleryComponent implements OnInit {
 
         this.galleryOptions = [
             {
-                width: '600px',
-                height: '400px',
+                width: '768px',
+                height: '576px',
                 thumbnailsColumns: 4,
                 imageAnimation: NgxGalleryAnimation.Slide
             },
@@ -38,14 +38,24 @@ export class GalleryComponent implements OnInit {
 
         this.galleryImages = [
             {
-                small: 'assets/ThoughtWorksReadingRadar.jpg',
-                medium: 'assets/ThoughtWorksReadingRadar.jpg',
-                big: 'assets/ThoughtWorksReadingRadar.jpg'
+                small: 'https://www.tanyixiong.com:8443/static/image/large/shandong.jpg',
+                medium: 'https://www.tanyixiong.com:8443/static/image/large/shandong.jpg',
+                big: 'https://www.tanyixiong.com:8443/static/image/large/shandong.jpg'
             },
             {
-                small: 'assets/ThoughtWorksReadingRadar.jpg',
-                medium: 'assets/ThoughtWorksReadingRadar.jpg',
-                big: 'assets/ThoughtWorksReadingRadar.jpg'
+                small: 'https://www.tanyixiong.com:8443/static/image/large/shandong2.jpg',
+                medium: 'https://www.tanyixiong.com:8443/static/image/large/shandong2.jpg',
+                big: 'https://www.tanyixiong.com:8443/static/image/large/shandong2.jpg'
+            },
+            {
+                small: 'https://www.tanyixiong.com:8443/static/image/large/shandong3.jpg',
+                medium: 'https://www.tanyixiong.com:8443/static/image/large/shandong3.jpg',
+                big: 'https://www.tanyixiong.com:8443/static/image/large/shandong3.jpg'
+            },
+            {
+                small: 'https://www.tanyixiong.com:8443/static/image/large/shandong4.jpg',
+                medium: 'https://www.tanyixiong.com:8443/static/image/large/shandong4.jpg',
+                big: 'https://www.tanyixiong.com:8443/static/image/large/shandong4.jpg'
             }
         ];
     }
