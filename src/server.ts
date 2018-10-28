@@ -34,6 +34,8 @@ app.set('views', 'src')
 
 app.get('*.*', express.static(join(DIST_FOLDER, 'browser')));
 
+app.use('/resource', express.static('/usr/site/resource'))
+
 app.get('*', (req, res) => {
   res.render('index', { req });
 });
