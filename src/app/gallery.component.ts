@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TransferState, makeStateKey } from '@angular/platform-browser';
+import { Meta, TransferState, makeStateKey } from '@angular/platform-browser';
 import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gallery';
 
 import { GalleryEntry } from './galleryEntry';
@@ -20,8 +20,15 @@ export class GalleryComponent implements OnInit {
     loading = false;
 
     constructor(
-        private galleryService: GalleryService,
-        private state: TransferState) { }
+        private meta: Meta,
+        private state: TransferState,
+        private galleryService: GalleryService) {
+            this.meta.addTags([
+                { name: 'description', content: '谭一雄的摄影集' },
+                { name: 'author', content: 'yixiong' },
+                { name: 'keywords', content: '摄影,旅游,佳能' }
+            ]);
+        }
 
     getGalleryEntries(): void {
         this.galleryService

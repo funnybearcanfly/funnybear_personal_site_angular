@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gallery';
 
 @Component({
@@ -8,6 +9,14 @@ import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gal
 export class AboutComponent implements OnInit {
     galleryOptions: NgxGalleryOptions[];
     galleryImages: NgxGalleryImage[];
+
+    constructor(private meta: Meta) {
+            this.meta.addTags([
+                { name: 'description', content: '谭一雄的个人经历' },
+                { name: 'author', content: 'yixiong' },
+                { name: 'keywords', content: '摩根史坦利,花旗,投资银行,武汉大学,复旦大学,Udemy' }
+            ]);
+        }
 
     ngOnInit(): void {
 

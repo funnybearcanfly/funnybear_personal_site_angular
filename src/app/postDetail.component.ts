@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TransferState, makeStateKey } from '@angular/platform-browser';
+import { Meta, TransferState, makeStateKey } from '@angular/platform-browser';
 
 import { Post } from './post';
 import { PostService } from './post.service';
@@ -19,6 +19,7 @@ export class PostDetailComponent implements OnInit {
     key: String;
 
     constructor(
+        private meta: Meta,
         private route: ActivatedRoute,
         private postService: PostService,
         private state: TransferState) { }
@@ -28,6 +29,11 @@ export class PostDetailComponent implements OnInit {
             .getPostDetail(key)
             .then(post => {
                 this.post = post;
+                this.meta.addTags([
+                    { name: 'description', content: post.description.toString() },
+                    { name: 'author', content: post.authurName.toString() },
+                    { name: 'keywords', content: post.keyword.toString() }
+                ]);
                 this.loading = false;
                 this.state.set(POSTDETAIL_KEY, post as any);
             });

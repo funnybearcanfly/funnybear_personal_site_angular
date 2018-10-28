@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TransferState, makeStateKey } from '@angular/platform-browser';
+import { Meta, TransferState, makeStateKey } from '@angular/platform-browser';
 
 import { Post } from './post';
 import { PostService } from './post.service';
@@ -17,8 +17,15 @@ export class PostsComponent implements OnInit {
     loading = false;
 
     constructor(
-        private postService: PostService,
-        private state: TransferState) { }
+        private meta: Meta,
+        private state: TransferState,
+        private postService: PostService) {
+            this.meta.addTags([
+                { name: 'description', content: '谭一雄的文章集' },
+                { name: 'author', content: '谭一雄,Tan Yixiong' },
+                { name: 'keywords', content: '谭一雄,博客,技术,Java,数据分析,金融,武汉大学,复旦大学,摩根史坦利' }
+            ]);
+        }
 
     getPosts(): void {
         this.postService

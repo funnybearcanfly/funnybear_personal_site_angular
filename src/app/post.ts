@@ -5,7 +5,7 @@ export class Post{
 	lastModifiedTime: Date;
 	title: String;
 	tag: String;
-	category: String;
+	keyword: String;
 	description: String;
 	content: String;
 }
