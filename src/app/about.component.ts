@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
-import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gallery';
+import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryImageSize, NgxGalleryAnimation } from 'ngx-gallery';
 
 @Component({
     templateUrl: './about.component.html',
@@ -22,25 +22,31 @@ export class AboutComponent implements OnInit {
 
         this.galleryOptions = [
             {
-                width: '550px',
-                height: '500px',
+                width: '768px',
+                height: '576px',
                 thumbnailsColumns: 4,
-                imageAnimation: NgxGalleryAnimation.Slide
+                imageAnimation: NgxGalleryAnimation.Slide,
+                imageSize: NgxGalleryImageSize.Contain,
+                thumbnailSize: NgxGalleryImageSize.Contain,
             },
             // max-width 800
             {
                 breakpoint: 800,
                 width: '100%',
-                height: '600px',
+                height: '290px',
                 imagePercent: 80,
                 thumbnailsPercent: 20,
                 thumbnailsMargin: 20,
-                thumbnailMargin: 20
+                thumbnailMargin: 20,
+                imageSize: NgxGalleryImageSize.Contain,
+                thumbnailSize: NgxGalleryImageSize.Contain,
             },
             // max-width 400
             {
                 breakpoint: 400,
-                preview: false
+                preview: false,
+                imageSize: NgxGalleryImageSize.Contain,
+                thumbnailSize: NgxGalleryImageSize.Contain,
             }
         ];
 

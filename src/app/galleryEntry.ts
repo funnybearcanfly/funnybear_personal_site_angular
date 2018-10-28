@@ -25,7 +25,7 @@ export class GalleryEntry{
             {
                 breakpoint: 800,
                 width: '100%',
-                height: '600px',
+                height: '290px',
                 imagePercent: 80,
                 thumbnailsPercent: 20,
                 thumbnailsMargin: 20,
