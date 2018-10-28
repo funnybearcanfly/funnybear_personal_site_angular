@@ -1,62 +1,49 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { TransferState, makeStateKey } from '@angular/platform-browser';
 import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gallery';
+
+import { GalleryEntry } from './galleryEntry';
+import { GalleryService } from './gallery.service';
+
+// keep transferstate to avoid duplicate http call.
+// e.g. if the data has been returned when SSR, then there is no need to call from browser.
+const GALLERY_KEY = makeStateKey('gallery');
 
 @Component({
     templateUrl: './gallery.component.html',
     styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnInit {
-    galleryOptions: NgxGalleryOptions[];
-    galleryImages: NgxGalleryImage[];
+    galleryEntries: GalleryEntry[];
+
+    loading = false;
+
+    constructor(
+        private galleryService: GalleryService,
+        private state: TransferState) { }
+
+    getGalleryEntries(): void {
+        this.galleryService
+            .getGalleryEntries()
+            .then(galleryEntries => {
+                this.galleryEntries = galleryEntries;
+                this.loading = false;
+                this.state.set(GALLERY_KEY, galleryEntries as any);
+            });
+
+        setTimeout(() => {
+            if (this.galleryEntries === null) {
+                this.loading = true;
+             }
+        }, 500);
+    }
 
     ngOnInit(): void {
-
-        this.galleryOptions = [
-            {
-                width: '768px',
-                height: '576px',
-                thumbnailsColumns: 4,
-                imageAnimation: NgxGalleryAnimation.Slide
-            },
-            // max-width 800
-            {
-                breakpoint: 800,
-                width: '100%',
-                height: '600px',
-                imagePercent: 80,
-                thumbnailsPercent: 20,
-                thumbnailsMargin: 20,
-                thumbnailMargin: 20
-            },
-            // max-width 400
-            {
-                breakpoint: 400,
-                preview: false
-            }
-        ];
-
-        this.galleryImages = [
-            {
-                small: 'https://www.tanyixiong.com:8443/static/image/large/shandong.jpg',
-                medium: 'https://www.tanyixiong.com:8443/static/image/large/shandong.jpg',
-                big: 'https://www.tanyixiong.com:8443/static/image/large/shandong.jpg'
-            },
-            {
-                small: 'https://www.tanyixiong.com:8443/static/image/large/shandong2.jpg',
-                medium: 'https://www.tanyixiong.com:8443/static/image/large/shandong2.jpg',
-                big: 'https://www.tanyixiong.com:8443/static/image/large/shandong2.jpg'
-            },
-            {
-                small: 'https://www.tanyixiong.com:8443/static/image/large/shandong3.jpg',
-                medium: 'https://www.tanyixiong.com:8443/static/image/large/shandong3.jpg',
-                big: 'https://www.tanyixiong.com:8443/static/image/large/shandong3.jpg'
-            },
-            {
-                small: 'https://www.tanyixiong.com:8443/static/image/large/shandong4.jpg',
-                medium: 'https://www.tanyixiong.com:8443/static/image/large/shandong4.jpg',
-                big: 'https://www.tanyixiong.com:8443/static/image/large/shandong4.jpg'
-            }
-        ];
+        this.galleryEntries = this.state.get(GALLERY_KEY, null as any);
+        if (!this.galleryEntries) {
+            this.galleryEntries = null;
+            this.getGalleryEntries();
+        }
     }
 }

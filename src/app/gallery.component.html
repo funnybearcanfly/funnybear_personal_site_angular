@@ -1,5 +1,8 @@
+<ngx-loading [show]="loading"></ngx-loading>
 <div class="container">
-    <h4>济南 - 夏</h4>
-    <hr/>
-    <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery> 
+    <div *ngFor="let galleryEntry of galleryEntries">
+        <h4>{{galleryEntry.name}}</h4>
+        <hr/>
+        <ngx-gallery [options]="galleryEntry.galleryOptions" [images]="galleryEntry.galleryImages"></ngx-gallery> 
+    </div>     
 </div>

@@ -13,6 +13,7 @@ import { PostDetailComponent } from './postDetail.component';
 
 import { AppRoutingModule } from './app-routing.module'
 
+import { GalleryService } from './gallery.service';
 import { PostService } from './post.service';
 
 @NgModule({
@@ -32,7 +33,7 @@ import { PostService } from './post.service';
     LoadingModule,
     NgxGalleryModule
   ],
-  providers: [PostService],
+  providers: [GalleryService,PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
