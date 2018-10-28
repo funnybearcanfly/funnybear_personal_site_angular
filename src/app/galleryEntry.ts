@@ -1,4 +1,4 @@
-import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gallery';
+import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryImageSize, NgxGalleryAnimation } from 'ngx-gallery';
 
 export class GalleryEntry{
 	name: String;
@@ -17,7 +17,9 @@ export class GalleryEntry{
                 width: '768px',
                 height: '576px',
                 thumbnailsColumns: 4,
-                imageAnimation: NgxGalleryAnimation.Slide
+                imageAnimation: NgxGalleryAnimation.Slide,
+                imageSize: NgxGalleryImageSize.Contain,
+                thumbnailSize: NgxGalleryImageSize.Contain,
             },
             // max-width 800
             {
@@ -27,12 +29,16 @@ export class GalleryEntry{
                 imagePercent: 80,
                 thumbnailsPercent: 20,
                 thumbnailsMargin: 20,
-                thumbnailMargin: 20
+                thumbnailMargin: 20,
+                imageSize: NgxGalleryImageSize.Contain,
+                thumbnailSize: NgxGalleryImageSize.Contain,
             },
             // max-width 400
             {
                 breakpoint: 400,
-                preview: false
+                preview: false,
+                imageSize: NgxGalleryImageSize.Contain,
+                thumbnailSize: NgxGalleryImageSize.Contain,
             }
         ];
 	}
