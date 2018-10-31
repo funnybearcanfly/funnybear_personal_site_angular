@@ -2,8 +2,11 @@ import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-bro
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { LoadingModule } from 'ngx-loading';
+import { NgxLoadingModule } from 'ngx-loading';
 import { NgxGalleryModule } from 'ngx-gallery';
+
+import { Angulartics2Module } from 'angulartics2';
+import { Angulartics2BaiduAnalytics } from 'angulartics2/baidu';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about.component';
@@ -26,11 +29,12 @@ import { PostService } from './post.service';
   ],
   imports: [
     AppRoutingModule,
+    Angulartics2Module.forRoot(),
     BrowserModule.withServerTransition({ appId: 'funnybear-personal-site-angular' }),
     FormsModule,
     HttpModule,
     BrowserTransferStateModule,
-    LoadingModule,
+    NgxLoadingModule,
     NgxGalleryModule
   ],
   providers: [GalleryService,PostService],
