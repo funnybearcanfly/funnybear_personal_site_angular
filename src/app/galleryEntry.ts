@@ -16,21 +16,18 @@ export class GalleryEntry{
             {
                 width: '768px',
                 height: '576px',
-                thumbnailsColumns: 4,
                 imageAnimation: NgxGalleryAnimation.Slide,
                 imageSize: NgxGalleryImageSize.Contain,
+                thumbnailsColumns: 4,
                 thumbnailSize: NgxGalleryImageSize.Contain,
             },
             // max-width 800
             {
                 breakpoint: 800,
                 width: '100%',
-                height: '290px',
-                imagePercent: 80,
-                thumbnailsPercent: 20,
-                thumbnailsMargin: 20,
-                thumbnailMargin: 20,
+                height: '350px',
                 imageSize: NgxGalleryImageSize.Contain,
+                thumbnailsColumns: 6,
                 thumbnailSize: NgxGalleryImageSize.Contain,
             },
             // max-width 400
@@ -38,6 +35,7 @@ export class GalleryEntry{
                 breakpoint: 400,
                 preview: false,
                 imageSize: NgxGalleryImageSize.Contain,
+                thumbnailsColumns: 4,
                 thumbnailSize: NgxGalleryImageSize.Contain,
             }
         ];
