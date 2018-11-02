@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { } from '@angular/router/';
 
-import { Angulartics2BaiduAnalytics } from 'angulartics2/baidu';
+import { Angulartics2GoogleGlobalSiteTag } from 'angulartics2/gst';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +12,8 @@ import { Angulartics2BaiduAnalytics } from 'angulartics2/baidu';
 export class AppComponent {
   selectedLink = '';
 
-  constructor(angulartics2BaiduAnalytics: Angulartics2BaiduAnalytics, router: Router) {
-    angulartics2BaiduAnalytics.startTracking();
+  constructor(angulartics2GoogleGlobalSiteTag: Angulartics2GoogleGlobalSiteTag, router: Router) {
+    angulartics2GoogleGlobalSiteTag.startTracking();
     router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.selectedLink = event.urlAfterRedirects;

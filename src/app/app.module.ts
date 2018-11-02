@@ -6,7 +6,7 @@ import { NgxLoadingModule } from 'ngx-loading';
 import { NgxGalleryModule } from 'ngx-gallery';
 
 import { Angulartics2Module } from 'angulartics2';
-import { Angulartics2BaiduAnalytics } from 'angulartics2/baidu';
+import { Angulartics2GoogleGlobalSiteTag } from 'angulartics2/gst';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about.component';
@@ -41,3 +41,4 @@ import { PostService } from './post.service';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
