@@ -20,6 +20,11 @@ export class GalleryEntry{
                 imageSize: NgxGalleryImageSize.Contain,
                 thumbnailsColumns: 4,
                 thumbnailSize: NgxGalleryImageSize.Contain,
+                previewCloseOnClick: true,
+                previewCloseOnEsc: true,
+                previewSwipe: true,
+                imageBullets: true,
+                imageSwipe: true,
             },
             // max-width 800
             {
@@ -29,14 +34,22 @@ export class GalleryEntry{
                 imageSize: NgxGalleryImageSize.Contain,
                 thumbnailsColumns: 6,
                 thumbnailSize: NgxGalleryImageSize.Contain,
+                previewCloseOnClick: true,
+                previewCloseOnEsc: true,
+                previewSwipe: true,
+                imageBullets: true,
+                imageSwipe: true,
             },
             // max-width 400
             {
                 breakpoint: 400,
+                height: '270px',
                 preview: false,
                 imageSize: NgxGalleryImageSize.Contain,
                 thumbnailsColumns: 4,
                 thumbnailSize: NgxGalleryImageSize.Contain,
+                imageBullets: true,
+                imageSwipe: true,
             }
         ];
 	}
