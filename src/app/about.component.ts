@@ -28,6 +28,11 @@ export class AboutComponent implements OnInit {
                 imageSize: NgxGalleryImageSize.Contain,
                 thumbnailsColumns: 4,
                 thumbnailSize: NgxGalleryImageSize.Contain,
+                previewCloseOnClick: true,
+                previewCloseOnEsc: true,
+                previewSwipe: true,
+                imageBullets: true,
+                imageSwipe: true,
             },
             // max-width 800
             {
@@ -37,77 +42,86 @@ export class AboutComponent implements OnInit {
                 imageSize: NgxGalleryImageSize.Contain,
                 thumbnailsColumns: 6,
                 thumbnailSize: NgxGalleryImageSize.Contain,
+                previewCloseOnClick: true,
+                previewCloseOnEsc: true,
+                previewSwipe: true,
+                imageBullets: true,
+                imageSwipe: true,
             },
             // max-width 400
             {
                 breakpoint: 400,
+                height: '270px',
                 preview: false,
                 imageSize: NgxGalleryImageSize.Contain,
                 thumbnailsColumns: 4,
                 thumbnailSize: NgxGalleryImageSize.Contain,
+                previewSwipe: true,
+                imageBullets: true,
+                imageSwipe: true,
             }
         ];
 
         this.galleryImages = [
             {
-                small: 'assets/course-certificates/Algorithms-and-Data Structures-in-Java-Part-I-small.jpg',
-                medium: 'assets/course-certificates/Algorithms-and-Data Structures-in-Java-Part-I.jpg',
-                big: 'assets/course-certificates/Algorithms-and-Data Structures-in-Java-Part-I.jpg'
+                small: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/small/Algorithms-and-Data Structures-in-Java-Part-I.jpg',
+                medium: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/medium/Algorithms-and-Data Structures-in-Java-Part-I.jpg',
+                big: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/large/Algorithms-and-Data Structures-in-Java-Part-I.jpg',
             },
             {
-                small: 'assets/course-certificates/Java-Advanced-Algorithm-small.jpg',
-                medium: 'assets/course-certificates/Java-Advanced-Algorithm.jpg',
-                big: 'assets/course-certificates/Java-Advanced-Algorithm.jpg'
+                small: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/small/Blockchain-and-Bitcoin-Fundamentals.jpg',
+                medium: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/medium/Blockchain-and-Bitcoin-Fundamentals.jpg',
+                big: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/large/Blockchain-and-Bitcoin-Fundamentals.jpg',
             },
             {
-                small: 'assets/course-certificates/Multithreading-and-Parallel-Computing-in-Java-small.jpg',
-                medium: 'assets/course-certificates/Multithreading-and-Parallel-Computing-in-Java.jpg',
-                big: 'assets/course-certificates/Multithreading-and-Parallel-Computing-in-Java.jpg'
+                small: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/small/Blockchain-A-Z-Learn-How-To-Build-Your-First-Blockchain.jpg',
+                medium: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/medium/Blockchain-A-Z-Learn-How-To-Build-Your-First-Blockchain.jpg',
+                big: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/large/Blockchain-A-Z-Learn-How-To-Build-Your-First-Blockchain.jpg',
             },
             {
-                small: 'assets/course-certificates/Java-Memory-Management-small.jpg',
-                medium: 'assets/course-certificates/Java-Memory-Management.jpg',
-                big: 'assets/course-certificates/Java-Memory-Management.jpg'
+                small: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/small/Fundamental-Financial-Math.jpg',
+                medium: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/medium/Fundamental-Financial-Math.jpg',
+                big: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/large/Fundamental-Financial-Math.jpg',
             },
             {
-                small: 'assets/course-certificates/Microservices-with-Spring-Cloud-small.jpg',
-                medium: 'assets/course-certificates/Microservices-with-Spring-Cloud.jpg',
-                big: 'assets/course-certificates/Microservices-with-Spring-Cloud.jpg'
+                small: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/small/Java-Advanced-Algorithm.jpg',
+                medium: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/medium/Java-Advanced-Algorithm.jpg',
+                big: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/large/Java-Advanced-Algorithm.jpg',
             },
             {
-                small: 'assets/course-certificates/Learn-Linux-in-5-Days-and-Level-Up-Your-Career-small.jpg',
-                medium: 'assets/course-certificates/Learn-Linux-in-5-Days-and-Level-Up-Your-Career.jpg',
-                big: 'assets/course-certificates/Learn-Linux-in-5-Days-and-Level-Up-Your-Career.jpg'
+                small: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/small/Java-Memory-Management.jpg',
+                medium: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/medium/Java-Memory-Management.jpg',
+                big: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/large/Java-Memory-Management.jpg',
             },
             {
-                small: 'assets/course-certificates/Fundamental-Financial-Math-small.jpg',
-                medium: 'assets/course-certificates/Fundamental-Financial-Math.jpg',
-                big: 'assets/course-certificates/Fundamental-Financial-Math.jpg'
+                small: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/small/Learn-Linux-in-5-Days-and-Level-Up-Your-Career.jpg',
+                medium: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/medium/Learn-Linux-in-5-Days-and-Level-Up-Your-Career.jpg',
+                big: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/large/Learn-Linux-in-5-Days-and-Level-Up-Your-Career.jpg',
             },
             {
-                small: 'assets/course-certificates/Statistics-for-Data-Science-and-Business-Analysis-small.jpg',
-                medium: 'assets/course-certificates/Statistics-for-Data-Science-and-Business-Analysis.jpg',
-                big: 'assets/course-certificates/Statistics-for-Data-Science-and-Business-Analysis.jpg'
+                small: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/small/Microservices-with-Spring-Cloud.jpg',
+                medium: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/medium/Microservices-with-Spring-Cloud.jpg',
+                big: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/large/Microservices-with-Spring-Cloud.jpg',
             },
             {
-                small: 'assets/course-certificates/The-Secrets-of-Body-Language-small.jpg',
-                medium: 'assets/course-certificates/The-Secrets-of-Body-Language.jpg',
-                big: 'assets/course-certificates/The-Secrets-of-Body-Language.jpg'
+                small: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/small/Multithreading-and-Parallel-Computing-in-Java.jpg',
+                medium: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/medium/Multithreading-and-Parallel-Computing-in-Java.jpg',
+                big: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/large/Multithreading-and-Parallel-Computing-in-Java.jpg',
             },
             {
-                small: 'assets/course-certificates/Blockchain-and-Bitcoin-Fundamentals-small.jpg',
-                medium: 'assets/course-certificates/Blockchain-and-Bitcoin-Fundamentals.jpg',
-                big: 'assets/course-certificates/Blockchain-and-Bitcoin-Fundamentals.jpg'
+                small: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/small/Python-for-Financial-Analysis-and-Algorithmic-Trading.jpg',
+                medium: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/medium/Python-for-Financial-Analysis-and-Algorithmic-Trading.jpg',
+                big: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/large/Python-for-Financial-Analysis-and-Algorithmic-Trading.jpg',
             },
             {
-                small: 'assets/course-certificates/Blockchain-A-Z-Learn-How-To-Build-Your-First-Blockchain-small.jpg',
-                medium: 'assets/course-certificates/Blockchain-A-Z-Learn-How-To-Build-Your-First-Blockchain.jpg',
-                big: 'assets/course-certificates/Blockchain-A-Z-Learn-How-To-Build-Your-First-Blockchain.jpg'
+                small: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/small/Statistics-for-Data-Science-and-Business-Analysis.jpg',
+                medium: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/medium/Statistics-for-Data-Science-and-Business-Analysis.jpg',
+                big: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/large/Statistics-for-Data-Science-and-Business-Analysis.jpg',
             },
             {
-                small: 'assets/course-certificates/Python-for-Financial-Analysis-and-Algorithmic-Trading-small.jpg',
-                medium: 'assets/course-certificates/Python-for-Financial-Analysis-and-Algorithmic-Trading.jpg',
-                big: 'assets/course-certificates/Python-for-Financial-Analysis-and-Algorithmic-Trading.jpg'
+                small: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/small/The-Secrets-of-Body-Language.jpg',
+                medium: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/medium/The-Secrets-of-Body-Language.jpg',
+                big: 'https://www.tanyixiong.com:3333/resource/gallery/udemy/large/The-Secrets-of-Body-Language.jpg',
             }
         ];
     }
