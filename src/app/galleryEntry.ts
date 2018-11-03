@@ -48,6 +48,7 @@ export class GalleryEntry{
                 imageSize: NgxGalleryImageSize.Contain,
                 thumbnailsColumns: 4,
                 thumbnailSize: NgxGalleryImageSize.Contain,
+                previewSwipe: true,
                 imageBullets: true,
                 imageSwipe: true,
             }
@@ -56,7 +57,7 @@ export class GalleryEntry{
 
 	private getGalleryImages(folderPath: String, imagePaths: String[]): NgxGalleryImage[] {
 		var images = new Array();
-		var basePath = "https://www.tanyixiong.com/" + folderPath.replace("/usr/site/", "") + "/";
+		var basePath = "https://www.tanyixiong.com:3333/" + folderPath.replace("/usr/site/", "") + "/";
 		var sortedImagePaths = imagePaths.sort();
 		for (var index = 0; index < sortedImagePaths.length; index++) {
 			images.push({

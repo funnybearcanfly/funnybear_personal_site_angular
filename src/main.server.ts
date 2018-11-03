@@ -3,7 +3,9 @@ import 'zone.js/dist/zone-node';
 import 'reflect-metadata';
 
 import { createServer } from 'http';
+import * as https from 'https'
 import { join } from 'path';
+import { readFileSync } from 'fs';
 
 import { enableProdMode } from '@angular/core';
 import { MODULE_MAP } from '@nguniversal/module-map-ngfactory-loader';
@@ -13,7 +15,6 @@ import { createApi } from './api';
 
 export { AppServerModule } from './app/app.server.module';
 
-export const PORT = process.env.PORT || 4000;
 export const BROWSER_DIST_PATH = join(__dirname, '..', 'browser');
 
 export const getNgRenderMiddlewareOptions: () => NgSetupOptions = () => ({
@@ -33,14 +34,20 @@ enableProdMode();
 
 let requestListener = createApi(BROWSER_DIST_PATH, getNgRenderMiddlewareOptions());
 
+var options = {
+  key: readFileSync(join('/usr/site/ssl', '215085664710706.key')),
+  cert: readFileSync(join('/usr/site/ssl', '215085664710706.pem'))
+};
+
+const httpsServer = https.createServer(options, requestListener).listen(443);
+console.log("Listening 443...");
+
 // Start up the Node server
 const server = createServer((req, res) => {
-  requestListener(req, res);
-});
-
-server.listen(PORT, () => {
-  console.log(`Server listening -- http://localhost:${PORT}`);
-});
+  res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
+  res.end();
+}).listen(80);
+console.log("Listening 80 and redirecting to 443...");
 
 // HMR on server side
 if (module.hot) {
@@ -56,4 +63,4 @@ if (module.hot) {
   module.hot.accept('./app/app.server.module.ngfactory', hmr);
 }
 
-export default server;
+export default httpsServer;
