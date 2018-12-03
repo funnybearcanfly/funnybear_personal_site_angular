@@ -1,7 +1,8 @@
-import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { TransferHttpCacheModule } from '@nguniversal/common';
 import { NgxLoadingModule } from 'ngx-loading';
 import { NgxGalleryModule } from 'ngx-gallery';
 
@@ -32,8 +33,8 @@ import { PostService } from './post.service';
     Angulartics2Module.forRoot(),
     BrowserModule.withServerTransition({ appId: 'funnybear-personal-site-angular' }),
     FormsModule,
-    HttpModule,
-    BrowserTransferStateModule,
+    HttpClientModule,
+    TransferHttpCacheModule,
     NgxLoadingModule,
     NgxGalleryModule
   ],

@@ -1,12 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Meta, TransferState, makeStateKey } from '@angular/platform-browser';
+import { Meta } from '@angular/platform-browser';
 
 import { Post } from './post';
 import { PostService } from './post.service';
-
-// keep transferstate to avoid duplicate http call.
-// e.g. if the data has been returned when SSR, then there is no need to call from browser.
-const POSTS_KEY = makeStateKey('posts');
 
 @Component({
     templateUrl: './posts.component.html',
@@ -18,7 +14,6 @@ export class PostsComponent implements OnInit {
 
     constructor(
         private meta: Meta,
-        private state: TransferState,
         private postService: PostService) {
             this.meta.addTags([
                 { name: 'description', content: '谭一雄的文章集' },
@@ -33,7 +28,6 @@ export class PostsComponent implements OnInit {
             .then(posts => {
                 this.posts = posts;
                 this.loading = false;
-                this.state.set(POSTS_KEY, posts as any);
             });
 
         setTimeout(() => {
@@ -44,7 +38,6 @@ export class PostsComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.posts = this.state.get(POSTS_KEY, null as any);
         if (!this.posts) {
             this.posts = null;
             this.getPosts();

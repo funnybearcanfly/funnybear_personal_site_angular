@@ -1,13 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Meta, TransferState, makeStateKey } from '@angular/platform-browser';
+import { Meta } from '@angular/platform-browser';
 
 import { Post } from './post';
 import { PostService } from './post.service';
-
-// keep transferstate to avoid duplicate http call.
-// e.g. if the data has been returned when SSR, then there is no need to call from browser.
-const POSTDETAIL_KEY = makeStateKey('postDetail');
 
 @Component({
     templateUrl: './postDetail.component.html',
@@ -21,8 +17,7 @@ export class PostDetailComponent implements OnInit {
     constructor(
         private meta: Meta,
         private route: ActivatedRoute,
-        private postService: PostService,
-        private state: TransferState) { }
+        private postService: PostService) { }
 
     getPostDetail(key: String): void {
         this.postService
@@ -35,7 +30,6 @@ export class PostDetailComponent implements OnInit {
                     { name: 'keywords', content: post.keyword.toString() }
                 ]);
                 this.loading = false;
-                this.state.set(POSTDETAIL_KEY, post as any);
             });
 
         setTimeout(() => {
@@ -53,7 +47,6 @@ export class PostDetailComponent implements OnInit {
             this.post = null;
             this.key = id_para;
             console.log(this.key);
-            this.post = this.state.get(POSTDETAIL_KEY, null as any);
             this.getPostDetail(this.key);
         }
     }
